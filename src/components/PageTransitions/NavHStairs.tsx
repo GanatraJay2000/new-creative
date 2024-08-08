@@ -9,9 +9,9 @@ function NavHStairs({ isOpen, children }: { isOpen: boolean; children: React.Rea
             transition: { duration: 0.4, delay: 0.15 * idx },
         },
         closed: {
-            left: '100%',
+            left: '100vw',
             transition: { duration: 0.4, delay: 0.15 * idx },
-            transitionEnd: { left: "-100%" },
+            transitionEnd: { left: "-100vw" },
         }
     });
 
@@ -22,7 +22,7 @@ function NavHStairs({ isOpen, children }: { isOpen: boolean; children: React.Rea
         },
         closed: {
             opacity: 0,
-            left: '100%',
+            left: '100vw',
         }
     };
 
@@ -39,7 +39,7 @@ function NavHStairs({ isOpen, children }: { isOpen: boolean; children: React.Rea
         <motion.div
             variants={variants2}
             animate={isOpen ? "open" : "closed"}
-            className={cn(`z-20 pointer-events-none p-10 text-white fixed inset-0 flex items-center justify-start bg-cover bg-center `)}
+            className={cn(`z-20 pointer-events-none p-10 text-white fixed inset-0 flex items-center justify-start bg-cover bg-center`)}
         >
             <div
                 className="banners h-screen w-screen overflow-hidden bg-transparent fixed"
