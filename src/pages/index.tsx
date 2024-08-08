@@ -11,7 +11,7 @@ export default function Home() {
       <main
         className={`flex min-h-screen flex-col items-center justify-center bg-[url("/assets/image/otis-redding.png")]  bg-[#d72322]  ${antonio.className}`}
       >
-        <div className={`${silka.className} z-50  fixed text-3xl top-10 left-10`}>Jay Ganatra?</div>
+        <div className={`${silka.className}  fixed text-3xl top-10 left-10`}>Jay Ganatra?</div>
         <Navigation />
         <div className="[font-size:16rem] font-black tracking-tighter">
           <Link href="/about">
