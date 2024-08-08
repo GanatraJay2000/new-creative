@@ -1,6 +1,6 @@
 import Inner from "@/components/Inner";
 import Navigation from "@/components/Navigation";
-import { antonio, bungee, inter, lora, monoton, nudica, poppins, prata, rampartOne, silka, spaceGrotesk, tiro, unna } from "@/lib/fonts/index";
+import { antonio, silka } from "@/lib/fonts/index";
 import Link from "next/link";
 
 
