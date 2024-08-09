@@ -42,7 +42,7 @@ function Navigation() {
                 <div className="uppercase tracking-negative text-9xl font-bold">
                     {
                         paths.map((path, i) => (
-                            <Link key={i} href={path.use == false ? "#" : path.url} className={cn("", {
+                            <Link key={i} href={path.url} className={cn("", {
                                 'text-stone-700': activePath === path.url,
                             })} >
                                 <Spanner text={path.name} animation />
