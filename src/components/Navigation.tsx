@@ -23,8 +23,7 @@ function Navigation() {
         },
         {
             name: 'Work',
-            url: '/work',
-            use: false,
+            url: '/work'
         },
         {
             name: 'About',
@@ -32,8 +31,7 @@ function Navigation() {
         },
         {
             name: 'Contact',
-            url: '/contact',
-            use: false,
+            url: '/contact'
         }
     ]
 
