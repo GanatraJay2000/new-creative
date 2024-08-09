@@ -14,9 +14,8 @@ export default function Home() {
         <div className={`${silka.className}  fixed text-3xl top-10 left-10`}>Jay Ganatra?</div>
         <Navigation />
         <div className="[font-size:16rem] font-black tracking-tighter">
-          <Link href="/about">
-            <FancySpanner text="ABOUT US" />
-          </Link>
+
+          <FancySpanner text="HOME" />
         </div>
 
 

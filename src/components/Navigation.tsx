@@ -1,26 +1,61 @@
 import { poppins } from '@/lib/fonts/index'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import NavVBanner from './PageTransitions/NavVBanner'
 import Spanner from './Spanner'
+import { usePathname } from 'next/navigation'
+import { cn } from '@/lib/utils'
+import { Menu } from 'lucide-react'
 
 function Navigation() {
     const [isOpen, setIsOpen] = useState(false)
+    const pathname = usePathname()
+    const [activePath, setActivePath] = useState("/")
+
+    useEffect(() => {
+        setActivePath(pathname)
+    }, []);
+
+    const paths = [
+        {
+            name: 'Home',
+            url: '/',
+        },
+        {
+            name: 'Work',
+            url: '/work',
+            use: false,
+        },
+        {
+            name: 'About',
+            url: '/about',
+        },
+        {
+            name: 'Contact',
+            url: '/contact',
+            use: false,
+        }
+    ]
 
     return (
         <>
             <HamMenuBtn setIsOpen={setIsOpen} />
             <NavVBanner isOpen={isOpen}>
                 <div className="uppercase tracking-negative text-9xl font-bold">
-                    <Spanner text="Home" />
-                    <Spanner text="Work" />
-                    <Link href="/about" className="text-stone-700">
-                        <Spanner text="About" /></Link>
-                    <Spanner text='Contact' />
+                    {
+                        paths.map((path, i) => (
+                            <Link key={i} href={path.use == false ? "#" : path.url} className={cn("", {
+                                'text-stone-700': activePath === path.url,
+                            })} >
+                                <Spanner text={path.name} animation />
+                            </Link>
+                        ))
+                    }
+
                 </div>
 
                 <div className={`absolute bottom-10 right-10 ${poppins.className}`}>Code by Jay</div>
-            </NavVBanner>
+            </NavVBanner >
         </>
     )
 }
@@ -28,9 +63,10 @@ function Navigation() {
 function HamMenuBtn({ setIsOpen }: { setIsOpen: React.Dispatch<React.SetStateAction<boolean>> }) {
     return (
         <button
-            className='z-40 fixed border top-10 right-10 h-10 w-10 rounded-full bg-white text-black p-3'
+            className='z-40 fixed border top-10 right-10 h-10 w-10 flex items-center justify-center rounded-full bg-white text-black '
             onClick={() => setIsOpen((a) => !a)}
         >
+            <Menu />
         </button>
     )
 }
