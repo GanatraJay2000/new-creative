@@ -1,11 +1,12 @@
 import React from 'react'
 import HStairs from './PageTransitions/HStairs'
+import VBanner from './PageTransitions/VBanner'
 
 function Inner({ children }: { children: React.ReactNode }) {
     return (
-        <HStairs>
+        <VBanner>
             {children}
-        </HStairs>
+        </VBanner>
     )
 }
 

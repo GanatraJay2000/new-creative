@@ -1,8 +1,8 @@
 import { poppins } from '@/lib/fonts/index'
 import React, { useState } from 'react'
-import NavHStairs from './PageTransitions/NavHStairs'
 import Link from 'next/link'
 import NavVBanner from './PageTransitions/NavVBanner'
+import Spanner from './Spanner'
 
 function Navigation() {
     const [isOpen, setIsOpen] = useState(false)
@@ -12,10 +12,11 @@ function Navigation() {
             <HamMenuBtn setIsOpen={setIsOpen} />
             <NavVBanner isOpen={isOpen}>
                 <div className="uppercase tracking-negative text-9xl font-bold">
-                    <div className="">Home</div>
-                    <div className="">Work</div>
-                    <Link href="/about" className="text-stone-700">About</Link>
-                    <div className="">Contact</div>
+                    <Spanner text="Home" />
+                    <Spanner text="Work" />
+                    <Link href="/about" className="text-stone-700">
+                        <Spanner text="About" /></Link>
+                    <Spanner text='Contact' />
                 </div>
 
                 <div className={`absolute bottom-10 right-10 ${poppins.className}`}>Code by Jay</div>
