@@ -5,7 +5,7 @@ import { silka, antonio } from "@/lib/fonts/index";
 import Navigation from '@/components/Navigation';
 import FancySpanner from '@/components/FancySpanner';
 
-function About() {
+function Contact() {
     return (
         <Inner>
             <main
@@ -15,7 +15,7 @@ function About() {
                 <Navigation />
                 <div className="[font-size:16rem] font-black tracking-tighter">
 
-                    <FancySpanner text="ABOUT ME" />
+                    <FancySpanner text="CONTACT ME" />
 
                 </div>
             </main>
@@ -23,4 +23,4 @@ function About() {
     )
 }
 
-export default About
+export default Contact
