@@ -15,7 +15,7 @@ function Contact() {
                 <Navigation />
                 <div className="[font-size:16rem] font-black tracking-tighter">
 
-                    <FancySpanner text="CONTACT ME" />
+                    <FancySpanner text="CONTACT" />
 
                 </div>
             </main>
