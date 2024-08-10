@@ -1,4 +1,4 @@
-import { Antonio, Bungee_Shade, Inter, Lora, Monoton, Poppins, Prata, Rampart_One, Space_Grotesk, Tiro_Devanagari_Sanskrit, Unna } from "next/font/google";
+import { Anton, Antonio, Bungee_Shade, DM_Serif_Display, Inter, Lora, Monoton, Poppins, Prata, Rampart_One, Space_Grotesk, Tiro_Devanagari_Sanskrit, Unna } from "next/font/google";
 import localFont from 'next/font/local'
 
 export const nudica = localFont({ src: './nudica/nudica.woff2' })
@@ -92,5 +92,19 @@ export const rampartOne = Rampart_One({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-rampart",
+  weight: ["400"],
+});
+
+export const dmSerifDisplay = DM_Serif_Display({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-dm",
+  weight: ["400"],
+});
+
+export const anton = Anton({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-anton",
   weight: ["400"],
 });
