@@ -1,7 +1,7 @@
 import Inner from '@/components/Inner'
 import React from 'react'
 
-import { silka, antonio } from "@/lib/fonts/index";
+import { silka, antonio, anton } from "@/lib/fonts/index";
 import Navigation from '@/components/Navigation';
 import FancySpanner from '@/components/FancySpanner';
 
@@ -15,7 +15,9 @@ function Work() {
                 <Navigation />
                 <div className="[font-size:16rem] font-black tracking-tighter">
 
-                    <FancySpanner text="WORK" />
+                    <div className="overflow-hidden h-[75vh] flex items-center">
+                        <FancySpanner className={`${anton.className} relative [font-size:20rem] [line-height:1em] `} text="WORK" />
+                    </div>
 
                 </div>
             </main>

@@ -44,8 +44,8 @@ function FontShowcase({ font, fontIs, className }: { font: NextFontWithVariable 
         <div className={cn("mb-4", className)}>
             <div className="font-bold text-xl uppercase">{fontIs}</div>
             <div className="grid grid-cols-2 w-full bg-white  rounded-lg p-5 ">
-                <p className={`${font.className} prose lg:prose-xl prose-slate !m-0 !p-0`}>The quick brown fox jumps over the lazy dog.</p>
-                <p className={`${font.className} prose lg:prose-xl prose-slate uppercase !m-0 !p-0 text-right`}>The quick brown fox jumps over the lazy dog.</p>
+                <div className={`${font.className} prose !max-w-full lg:prose-xl prose-slate !m-0 !p-0`}>The quick brown fox jumps over the lazy dog.</div>
+                <div className={`${font.className} prose lg:prose-xl prose-slate !max-w-full uppercase !m-0 !p-0 text-right`}>The quick brown fox jumps over the lazy dog.</div>
             </div>
         </div>
     )

@@ -13,7 +13,9 @@ export default function Home() {
       >
         <div className={`${silka.className}  fixed text-3xl top-10 left-10`}>Jay Ganatra?</div>
         <Navigation />
-        <FancySpanner className={`${anton.className} [font-size:16em]`} text="HOME" />
+        <div className="overflow-hidden h-[75vh] flex items-center">
+          <FancySpanner className={`${anton.className} relative [font-size:20rem] [line-height:1em] `} text="HOME" />
+        </div>
       </main>
     </Inner>
   );
