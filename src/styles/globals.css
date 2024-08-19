@@ -90,15 +90,22 @@
   -webkit-text-stroke: 3px black;
 }
 
-.tracking-negative {
-  letter-spacing: -0.075em;
-}
 
 
 .banner {
-  background: url("/assets/image/texture-dark.jpg") no-repeat;
+  background: url("/assets/image/back/texture-dark.jpg") no-repeat;
   position: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: #ef4444;
+}
+
+::selection {
+  color: white;
+  background: #ef4444;
 }

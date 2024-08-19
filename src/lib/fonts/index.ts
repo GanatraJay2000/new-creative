@@ -1,22 +1,51 @@
-import { Anton, Antonio, Bungee_Shade, DM_Serif_Display, Inter, Lora, Monoton, Poppins, Prata, Rampart_One, Space_Grotesk, Tiro_Devanagari_Sanskrit, Unna } from "next/font/google";
-import localFont from 'next/font/local'
+import {
+  Anton,
+  Antonio,
+  Bungee_Shade,
+  DM_Serif_Display,
+  Inter,
+  Lora,
+  Monoton,
+  Poppins,
+  Prata,
+  Rampart_One,
+  Space_Grotesk,
+  Tiro_Devanagari_Sanskrit,
+  Unna,
+} from "next/font/google";
+import localFont from "next/font/local";
 
-export const nudica = localFont({ src: './nudica/nudica.woff2' })
+export const nudica = localFont({ src: "./nudica/nudica.woff2" });
 
 export const silka = localFont({
   src: [
     {
-      path: './silka/silka-regular.woff2',
-      weight: '400',
-      style: 'normal',
+      path: "./silka/silka-regular.woff2",
+      weight: "400",
+      style: "normal",
     },
     {
-      path: './silka/silka-regularitalic.woff2',
-      weight: '400',
-      style: 'italic',
+      path: "./silka/silka-regularitalic.woff2",
+      weight: "400",
+      style: "italic",
     },
-  ]
-})
+  ],
+});
+
+export const gilroy = localFont({
+  src: [
+    {
+      path: "./gilroy/ExtraBold.otf",
+      weight: "900",
+      style: "normal",
+    },
+    {
+      path: "./gilroy/Light.otf",
+      weight: "200",
+      style: "normal",
+    },
+  ],
+});
 
 export const poppins = Poppins({
   subsets: ["latin"],
