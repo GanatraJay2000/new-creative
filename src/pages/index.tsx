@@ -10,16 +10,14 @@ import Link from "next/link";
 export default function Home() {
   return (
     <Inner>
-      <main
-        className={`flex min-h-screen flex-col items-center justify-center  relative `}
-      >
-        <Navigation />
-        <div className="flex items-center gap-5">
+      <main className={`min-h-screen relative `}>
+        {/* <Navigation /> */}
+        <div className="flex items-center gap-5 p-5">
           <Image
             src="/assets/image/dp.jpg"
-            width={175}
-            height={175}
-            className="rounded-full aspect-square object-cover object-top"
+            width={250}
+            height={250}
+            className="rounded-xl aspect-square object-cover object-top outline outline-offset-4 outline-amber-500"
             alt={"DP"}
           />
           <div className="">
@@ -29,7 +27,7 @@ export default function Home() {
             <div className={`${silka.className} prose prose-2xl`}>
               Part-time Developer / Full-time Student
             </div>
-            <div className="flex gap-5 text-red-500">
+            <div className="flex gap-5 text-amber-600">
               <Link href="/about">About Me</Link>
               <Link href="/work">Work</Link>
               <Link href="/fonts">Fonts</Link>

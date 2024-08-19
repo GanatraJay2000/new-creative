@@ -7,7 +7,7 @@ function Spanner({
   className,
   spanClass,
   animation = false,
-  color = "#d72322",
+  color = "#ef4444",
 }: {
   text: string;
   className?: string;

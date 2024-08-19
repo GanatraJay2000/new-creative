@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 function FancySpanner({
   text,
   className,
-  color = "#d72322",
+  color = "#ef4444",
 }: {
   text: string;
   className?: string;
