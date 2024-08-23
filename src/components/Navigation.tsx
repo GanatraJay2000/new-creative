@@ -19,12 +19,12 @@ function Navigation() {
 
   return (
     <>
-      <div className="">
+      <>
         <div className={`absolute top-3 left-3 text-2xl ${silka.className}`}>
           JG
         </div>
         <HamMenuBtn setIsOpen={setIsOpen} />
-      </div>
+      </>
       <NavVBanner isOpen={isOpen}>
         <div className="uppercase text-9xl tracking-tight">
           {paths.map((path, i) => (

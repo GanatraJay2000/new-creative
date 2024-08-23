@@ -109,3 +109,68 @@
   color: white;
   background: #ef4444;
 }
+
+
+
+
+.content-grid,
+.content-grid-restricted,
+.full-width {
+  --cal: calc(8.3333333333% - 1px);
+  --padding-inline: 2rem;
+  --content-max-width: 70ch;
+  --breakout-max-width: 85ch;
+
+  --breakout-size: calc(
+    (var(--breakout-max-width) - var(--content-max-width)) / 2
+  );
+
+  display: grid;
+  grid-template-columns:
+    [full-width-start]
+    var(--cal)
+    [breakout-start]
+    var(--cal)
+    [content-start]
+    var(--cal)
+    [level-2-start]
+    var(--cal)
+    [level-1-start]
+    auto
+    [level-1-end]
+    var(--cal)
+    [level-2-end]
+    var(--cal)
+    [content-end]
+    var(--cal)
+    [breakout-end]
+    var(--cal)
+    [full-width-end];
+}
+
+.content-grid-restricted > .content-part {
+  grid-column: content;
+}
+
+.content-grid-restricted > * {
+  grid-column: full-width;
+}
+
+:is(.content-grid, .full-width) > * {
+  grid-column: content;
+}
+
+:is(.content-grid, .full-width, .content-grid-restricted) > .level-1 {
+  grid-column: level-1;
+}
+:is(.content-grid, .full-width, .content-grid-restricted) > .level-2 {
+  grid-column: level-2;
+}
+
+:is(.content-grid, .full-width, .content-grid-restricted) > .breakout {
+  grid-column: breakout;
+}
+
+:is(.content-grid, .full-width, .content-grid-restricted) > .full-width {
+  grid-column: full-width;
+}
